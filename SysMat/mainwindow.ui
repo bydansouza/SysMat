@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>686</width>
+    <height>358</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>686</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCadastramentos">
+    <property name="title">
+     <string>Cadastramentos</string>
+    </property>
+    <widget class="QMenu" name="menuAlunos">
+     <property name="title">
+      <string>Alunos</string>
+     </property>
+     <addaction name="actionConsultar_Alun"/>
+     <addaction name="actionAddRem_Alun"/>
+    </widget>
+    <widget class="QMenu" name="menuProfessores">
+     <property name="title">
+      <string>Professores</string>
+     </property>
+     <addaction name="actionConsultar_Prof"/>
+     <addaction name="actionAddRem_Prof"/>
+    </widget>
+    <widget class="QMenu" name="menuDisciplinas">
+     <property name="title">
+      <string>Disciplinas</string>
+     </property>
+     <addaction name="actionConsultar_Disc"/>
+     <addaction name="actionAddRem_Disc"/>
+    </widget>
+    <addaction name="menuAlunos"/>
+    <addaction name="menuProfessores"/>
+    <addaction name="menuDisciplinas"/>
+   </widget>
+   <addaction name="menuCadastramentos"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionConsultar_Alun">
+   <property name="text">
+    <string>Consultar</string>
+   </property>
+  </action>
+  <action name="actionAddRem_Alun">
+   <property name="text">
+    <string>Adicionar/Remover</string>
+   </property>
+  </action>
+  <action name="actionConsultar_Prof">
+   <property name="text">
+    <string>Consultar</string>
+   </property>
+  </action>
+  <action name="actionAddRem_Prof">
+   <property name="text">
+    <string>Adicionar/Remover</string>
+   </property>
+  </action>
+  <action name="actionConsultar_Disc">
+   <property name="text">
+    <string>Consultar</string>
+   </property>
+  </action>
+  <action name="actionAddRem_Disc">
+   <property name="text">
+    <string>Adicionar/Remover</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
