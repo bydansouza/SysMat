@@ -12,8 +12,16 @@ AddRem::AddRem(QWidget *parent,user_t _type)
     _phone = new QLabel(tr("Fone:"));
     _pass = new QLabel(tr("Senha de Acesso:"));
 
-    if(_type == Aluno){
+    switch (_type) {
+    case Aluno:
 
+        break;
+    case Professor:
+
+        break;
+    case Disciplina:
+
+        break;
     }
 
     _lineNome = new QLineEdit;
@@ -22,6 +30,7 @@ AddRem::AddRem(QWidget *parent,user_t _type)
     _linePhone = new QLineEdit;
     _linePass = new QLineEdit;
     _linePass->setEchoMode(QLineEdit::Password); //set QlineEdit to password type
+    _linePass->setMaximumSize(200,50);
 
     _nome->setBuddy(_lineNome);
     _id->setBuddy(_lineId);
@@ -29,10 +38,22 @@ AddRem::AddRem(QWidget *parent,user_t _type)
     _phone->setBuddy(_linePhone);
     _pass->setBuddy(_linePass);
 
+    _findButton = new QPushButton(tr("Procurar"));
+    _editButton = new QPushButton(tr("Alterar"));
+    _addButton = new QPushButton(tr("Adicionar"));
+    _remButton = new QPushButton(tr("Remover"));
+
+    //_findButton->setDefault(true);
+    _findButton->setEnabled(true);
+    _editButton->setEnabled(true);
+    _addButton->setEnabled(true);
+    _remButton->setEnabled(true);
+
     //Criando uma HBox com o _nome e _lineNome
     QHBoxLayout *lineOne = new QHBoxLayout;
     lineOne->addWidget(_nome);
     lineOne->addWidget(_lineNome);
+    lineOne->addWidget(_findButton);
 
     QHBoxLayout *lineTwo = new QHBoxLayout;
     lineTwo->addWidget(_id);
@@ -48,15 +69,21 @@ AddRem::AddRem(QWidget *parent,user_t _type)
     lineFour->addWidget(_pass);
     lineFour->addWidget(_linePass);
 
+     QHBoxLayout *lineFive = new QHBoxLayout;
+     lineFive->addWidget(_editButton);
+     lineFive->addWidget(_addButton);
+     lineFive->addWidget(_remButton);
+
     //Criando uam VBox com as três linhas previamente criadas
     QVBoxLayout *janelaAddRem = new QVBoxLayout;
     janelaAddRem->addLayout(lineOne);
     janelaAddRem->addLayout(lineTwo);
     janelaAddRem->addLayout(lineTree);
     janelaAddRem->addLayout(lineFour);
+    janelaAddRem->addLayout(lineFive);
 
     setLayout(janelaAddRem);
-    setWindowTitle("Adcionar ou Remover Usuário");
+    setWindowTitle("Alterar, Adicionar ou Remover Usuário");
     setFixedHeight(sizeHint().height());
     setFixedWidth(sizeHint().width());
 }

@@ -40,3 +40,18 @@ void MainWindow::on_actionAddRem_Prof_triggered(){
 void MainWindow::on_actionAddRem_Disc_triggered(){
 
 }
+
+void MainWindow::on_Alunos_clicked()
+{
+
+}
+
+void MainWindow::on_Disciplinas_clicked()
+{
+
+}
+
+void MainWindow::on_Professores_clicked()
+{
+
+}

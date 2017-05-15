@@ -29,12 +29,11 @@ private slots:
     void enableFindButton(const QString &text);
 
 private:
-    QLabel *label;
-    QLineEdit *lineEdit;
-    QCheckBox *caseCheckBox;
-    QCheckBox *backwardCheckBox;
-    QPushButton *findButton;
-    QPushButton *closeButton;
+    QLabel *_nameFind;
+    QLineEdit *_nameLine;
+    //QCheckBox *caseCheckBox;
+    //QCheckBox *backwardCheckBox;
+    QPushButton *_findButton,*_closeButton;
 };
 
 #endif // CONSULTAR_H

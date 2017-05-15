@@ -22,6 +22,9 @@ private slots:
     void on_actionAddRem_Alun_triggered();
     void on_actionAddRem_Prof_triggered();
     void on_actionAddRem_Disc_triggered();
+    void on_Alunos_clicked();
+    void on_Disciplinas_clicked();
+    void on_Professores_clicked();
 
 private:
     Ui::MainWindow *ui;

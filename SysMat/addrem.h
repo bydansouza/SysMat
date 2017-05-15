@@ -25,8 +25,7 @@ private:
     QLineEdit *_lineNome,*_lineId,*_lineMail,*_linePhone,*_linePass;
     //QCheckBox *caseCheckBox;
     //QCheckBox *backwardCheckBox;
-    //QPushButton *findButton;
-    //QPushButton *closeButton;
+    QPushButton *_findButton,*_editButton,*_addButton,*_remButton;
 };
 
 #endif // ADDREM_H
