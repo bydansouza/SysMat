@@ -1,0 +1,16 @@
+INPUT(
+./release/main.o
+./release/mainwindow.o
+./release/consultar.o
+./release/addrem.o
+./release/client.o
+./release/usuario.o
+./release/admin.o
+./release/professor.o
+./release/aluno.o
+./release/horarioaulas.o
+./release/moc_mainwindow.o
+./release/moc_consultar.o
+./release/moc_addrem.o
+./release/moc_client.o
+);

@@ -26,11 +26,30 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp\
         mainwindow.cpp \
     consultar.cpp \
-    addrem.cpp
+    addrem.cpp \
+    client.cpp \
+    usuario.cpp \
+    admin.cpp \
+    professor.cpp \
+    aluno.cpp \
+    horarioaulas.cpp \
+    disciplinas.cpp \
+    ofertada.cpp \
+    inscricao.cpp
 
 HEADERS  += mainwindow.h \
     consultar.h \
     addrem.h \
-    globaldefines.h
+    globaldefines.h \
+    client.h \
+    usuario.h \
+    admin.h \
+    professor.h \
+    aluno.h \
+    horarioaulas.h \
+    disciplinas.h \
+    ofertada.h \
+    inscricao.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    client.ui

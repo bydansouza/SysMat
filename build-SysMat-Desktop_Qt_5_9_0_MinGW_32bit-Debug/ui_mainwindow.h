@@ -50,7 +50,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(581, 308);
+        MainWindow->resize(581, 533);
         actionConsultar_Alun = new QAction(MainWindow);
         actionConsultar_Alun->setObjectName(QStringLiteral("actionConsultar_Alun"));
         actionAddRem_Alun = new QAction(MainWindow);

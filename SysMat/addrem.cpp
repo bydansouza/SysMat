@@ -12,18 +12,6 @@ AddRem::AddRem(QWidget *parent,user_t _type)
     _phone = new QLabel(tr("Fone:"));
     _pass = new QLabel(tr("Senha de Acesso:"));
 
-    switch (_type) {
-    case Aluno:
-
-        break;
-    case Professor:
-
-        break;
-    case Disciplina:
-
-        break;
-    }
-
     _lineNome = new QLineEdit;
     _lineId = new QLineEdit;
     _lineMail = new QLineEdit;
@@ -74,16 +62,34 @@ AddRem::AddRem(QWidget *parent,user_t _type)
      lineFive->addWidget(_addButton);
      lineFive->addWidget(_remButton);
 
-    //Criando uam VBox com as três linhas previamente criadas
-    QVBoxLayout *janelaAddRem = new QVBoxLayout;
-    janelaAddRem->addLayout(lineOne);
-    janelaAddRem->addLayout(lineTwo);
-    janelaAddRem->addLayout(lineTree);
-    janelaAddRem->addLayout(lineFour);
-    janelaAddRem->addLayout(lineFive);
+    //Criando uma VBox com as linhas previamente criadas
+    QVBoxLayout *formGeral = new QVBoxLayout;
+    formGeral->addLayout(lineOne);
+    formGeral->addLayout(lineTwo);
+    formGeral->addLayout(lineTree);
+    formGeral->addLayout(lineFour);
 
-    setLayout(janelaAddRem);
-    setWindowTitle("Alterar, Adicionar ou Remover Usuário");
+    switch (_type) {
+    case Aluno:
+
+        formGeral->addLayout(lineFive);
+        setLayout(formGeral);
+        setWindowTitle("Alterar, Adicionar ou Remover Alunos");
+        break;
+    case Professor:
+
+        formGeral->addLayout(lineFive);
+        setLayout(formGeral);
+        setWindowTitle("Alterar, Adicionar ou Remover Professores");
+        break;
+    case Disciplina:
+
+        formGeral->addLayout(lineFive);
+        setLayout(formGeral);
+        setWindowTitle("Alterar, Adicionar ou Remover Disciplinas");
+        break;
+    }
+
     setFixedHeight(sizeHint().height());
     setFixedWidth(sizeHint().width());
 }
